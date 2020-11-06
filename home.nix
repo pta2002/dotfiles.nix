@@ -40,9 +40,12 @@
 
   imports = [
     ./modules/git.nix
+    ./modules/fish.nix
     ./modules/kitty.nix
     ./modules/awesome.nix
     ./modules/theme.nix
     ./user.nix
+
+    ./machines/mercury.nix
   ];
 }
