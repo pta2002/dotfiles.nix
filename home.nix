@@ -35,6 +35,8 @@
 
     zoom-us
     emacs
+
+    libqalculate
   ];
   home.sessionVariables = { EDITOR = "nvim"; };
 
@@ -44,6 +46,7 @@
     ./modules/kitty.nix
     ./modules/awesome.nix
     ./modules/theme.nix
+    ./modules/zathura.nix
     ./user.nix
 
     ./machines/mercury.nix
