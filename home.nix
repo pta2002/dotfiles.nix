@@ -47,6 +47,7 @@
     ./modules/awesome.nix
     ./modules/theme.nix
     ./modules/zathura.nix
+    ./modules/starship.nix
     ./user.nix
 
     ./machines/mercury.nix

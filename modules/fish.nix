@@ -1,5 +1,8 @@
 { pkgs, ... }:
 {
+  # Makes nix-shell use fish
+  home.packages = [ pkgs.any-nix-shell ];
+
   programs.fish = {
     enable = true;
     shellAliases = {
@@ -7,5 +10,13 @@
       vi = "nvim";
       vim = "nvim";
     };
+
+    interactiveShellInit = ''
+      set fish_greeting
+    '';
+
+    promptInit = ''
+      any-nix-shell fish | source
+    '';
   };
 }
