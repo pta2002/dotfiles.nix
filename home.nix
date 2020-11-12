@@ -37,6 +37,7 @@
     emacs
 
     libqalculate
+    libreoffice
   ];
   home.sessionVariables = { EDITOR = "nvim"; };
 
