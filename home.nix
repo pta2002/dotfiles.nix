@@ -1,5 +1,4 @@
 { config, pkgs, ... }:
-
 {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -30,14 +29,20 @@
   home.packages = with pkgs; [
     git
     ninja
+    ripgrep
 
     gcc
 
     zoom-us
     emacs
 
+    vlc
+
     libqalculate
     libreoffice
+
+    mathematica
+    qbittorrent
   ];
   home.sessionVariables = { EDITOR = "nvim"; };
 
