@@ -41,7 +41,10 @@
     libqalculate
     libreoffice
 
-    mathematica
+    texlive.combined.scheme-basic
+
+    # Mathematica should probably be installed through nix-env
+    # mathematica
     qbittorrent
   ];
   home.sessionVariables = { EDITOR = "nvim"; };
