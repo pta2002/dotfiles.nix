@@ -41,7 +41,7 @@
     libqalculate
     libreoffice
 
-    texlive.combined.scheme-basic
+    texlive.combined.scheme-medium
 
     # Mathematica should probably be installed through nix-env
     # mathematica
