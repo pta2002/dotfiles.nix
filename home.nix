@@ -47,7 +47,7 @@
   imports = [
     ./modules/git.nix
     ./modules/fish.nix
-    ./modules/nvim.nix
+    ./modules/nvim
     ./modules/kitty.nix
     ./modules/awesome.nix
     ./modules/theme.nix

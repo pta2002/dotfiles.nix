@@ -7,17 +7,7 @@
     viAlias  = true;
     vimAlias = true;
 
-    extraConfig = ''
-      set nocompatible
-      set nobackup
-
-      set mouse=a
-
-      colorscheme gruvbox
-
-      map ç :
-      map - /
-    '';
+    extraConfig = builtins.readFile ./init.vim;
 
     plugins = with pkgs.vimPlugins; [
       vim-nix
