@@ -32,6 +32,7 @@
     ripgrep
 
     gcc
+    gnumake
 
     zoom-us
     emacs
@@ -46,6 +47,7 @@
     # Mathematica should probably be installed through nix-env
     # mathematica
     qbittorrent
+    kicad-small
   ];
   home.sessionVariables = { EDITOR = "nvim"; };
 
