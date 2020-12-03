@@ -18,18 +18,11 @@
   # changes in each release.
   home.stateVersion = "21.03";
 
-  programs.neovim = {
-    enable  = true;
-    package = pkgs.neovim-nightly;
-
-    viAlias  = true;
-    vimAlias = true;
-  };
-
   home.packages = with pkgs; [
     git
     ninja
     ripgrep
+    direnv
 
     gcc
     gnumake
@@ -54,6 +47,7 @@
   imports = [
     ./modules/git.nix
     ./modules/fish.nix
+    ./modules/nvim.nix
     ./modules/kitty.nix
     ./modules/awesome.nix
     ./modules/theme.nix
