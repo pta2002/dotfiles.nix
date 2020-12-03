@@ -24,7 +24,7 @@
     ripgrep
     direnv
 
-    gcc
+    gcc gdb
     gnumake
 
     zoom-us
