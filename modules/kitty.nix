@@ -1,16 +1,35 @@
 { config, lib, pkgs, ... }:
+let
+  iosevka-term = pkgs.iosevka.override (attrs: {
+    set = "term";
+
+    privateBuildPlan = {
+      family = "Iosevka Term";
+      design = [
+        "term" "v-l-italic" "v-i-italic" "v-g-singlestorey"
+      ];
+    };
+  });
+in
 {
+  fonts.fontconfig.enable = true;
+
   programs.kitty = {
     enable = true;
-    font.package = pkgs.jetbrains-mono;
-    font.name = "JetBrains Mono";
+    font.package = iosevka-term;
+    font.name = ''Iosevka Term Extended'';
 
     settings = {
       font_size = "12.0";
       background = "#282828";
 
+      bold_font = "Iosevka Term Extended:bold";
+      italic_font = "Iosevka Term Extended:italic";
+      bold_italic_font = "Iosevka Term Extended:bold:italic";
+
+      symbol_map = "U+E0A0 Hack Nerd Font";
+
       foreground = "#ebdbb2";
-      cursorColor = "#ebdbb2";
 
       color0 = "#282828";
       color1 = "#cc241d";
