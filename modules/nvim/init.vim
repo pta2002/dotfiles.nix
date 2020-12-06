@@ -12,7 +12,6 @@ set autoindent cindent		  " Automatically indent on new lines
 set linebreak			          " Wrap lines
 
 " Visuals
-colorscheme gruvbox
 set number
 
 " Handy things

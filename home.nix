@@ -47,14 +47,14 @@
   imports = [
     ./modules/git.nix
     ./modules/fish.nix
-    ./modules/nvim
     ./modules/kitty.nix
     ./modules/awesome.nix
     ./modules/theme.nix
     ./modules/zathura.nix
     ./modules/starship.nix
-    ./user.nix
+    ./modules/nvim
 
+    ./user.nix
     ./machines/mercury.nix
   ];
 }

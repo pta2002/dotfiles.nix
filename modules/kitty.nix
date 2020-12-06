@@ -48,6 +48,8 @@ in
       color14 = "#8ec07c";
       color15 = "#ebdbb2";
 
+      disable_ligatures = "always";
+
       background_opacity = "0.5";
       window_padding_width = "5";
     };
