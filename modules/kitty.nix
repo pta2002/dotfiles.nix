@@ -12,6 +12,10 @@ let
   });
 in
 {
+  imports = [
+    ./colorscheme.nix
+  ];
+
   fonts.fontconfig.enable = true;
 
   programs.kitty = {
@@ -21,7 +25,6 @@ in
 
     settings = {
       font_size = "12.0";
-      background = "#282828";
 
       bold_font = "Iosevka Term Extended:bold";
       italic_font = "Iosevka Term Extended:italic";
@@ -29,24 +32,25 @@ in
 
       symbol_map = "U+E0A0 Hack Nerd Font";
 
-      foreground = "#ebdbb2";
+      foreground = config.user.colorscheme.color15;
+      background = config.user.colorscheme.color0;
 
-      color0 = "#282828";
-      color1 = "#cc241d";
-      color2 = "#98971a";
-      color3 = "#d79921";
-      color4 = "#458588";
-      color5 = "#b16286";
-      color6 = "#689d6a";
-      color8 = "#928374";
-      color7 = "#a89984";
-      color9 = "#fb4934";
-      color10 = "#b8bb26";
-      color11 = "#fabd2f";
-      color12 = "#83a598";
-      color13 = "#d3869b";
-      color14 = "#8ec07c";
-      color15 = "#ebdbb2";
+      color0 = config.user.colorscheme.color0;
+      color1 = config.user.colorscheme.color1;
+      color2 = config.user.colorscheme.color2;
+      color3 = config.user.colorscheme.color3;
+      color4 = config.user.colorscheme.color4;
+      color5 = config.user.colorscheme.color5;
+      color6 = config.user.colorscheme.color6;
+      color7 = config.user.colorscheme.color7;
+      color8 = config.user.colorscheme.color8;
+      color9 = config.user.colorscheme.color9;
+      color10 = config.user.colorscheme.color10;
+      color11 = config.user.colorscheme.color11;
+      color12 = config.user.colorscheme.color12;
+      color13 = config.user.colorscheme.color13;
+      color14 = config.user.colorscheme.color14;
+      color15 = config.user.colorscheme.color15;
 
       disable_ligatures = "always";
 

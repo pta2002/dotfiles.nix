@@ -2,13 +2,14 @@
 with lib;
 let
   colorOption = mkOption {
-    type = types.string;
+    type = types.str;
     default = "";
     description = "A color on the palette";
   };
-
-  colorschemeOption = types.submodule {
-    options = {
+in
+{
+  options = {
+    user.colorscheme = {
       color0 = colorOption;
       color1 = colorOption;
       color2 = colorOption;
@@ -26,25 +27,18 @@ let
       color14 = colorOption;
       color15 = colorOption;
 
-      vimPlugin = types.submodule {
-        options = {
-          plugin = mkOption {
-            type = types.package;
-            description = "vim plugin";
-          };
+      vimPlugin = {
+        plugin = mkOption {
+          type = types.package;
+          description = "vim plugin";
+        };
 
-          config = mkOption {
-            type = type.lines;
-            description = "vimscript for this plugin";
-            default = "";
-          };
+        config = mkOption {
+          type = types.lines;
+          description = "vimscript for this plugin";
+          default = "";
         };
       };
     };
-  };
-in
-{
-  options = {
-    colorscheme = colorschemeOption;
   };
 }

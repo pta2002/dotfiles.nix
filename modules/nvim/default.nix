@@ -1,15 +1,9 @@
-{ pkgs, ... }:
-let
-  colorscheme = {
-    vimPlugin.package = pkgs.vimPlugins.gruvbox;
-    vimPlugin.name = "gruvbox";
-  };
-  # colorscheme = {
-  #   vimPlugin.package = pkgs.vimPlugins.oceanic-next;
-  #   vimPlugin.name = "OceanicNext";
-  # };
-in
+{ pkgs, config, ... }:
 {
+  imports = [
+    ../colorscheme.nix
+  ];
+
   programs.neovim = {
     enable  = true;
     package = pkgs.neovim-nightly;
@@ -40,10 +34,9 @@ in
         '';
       }
 
-      { plugin = colorscheme.vimPlugin.package;
-        config = "colorscheme ${colorscheme.vimPlugin.name}"; }
-      { plugin = lightline-vim;
-        config = "let g:lightline = { 'colorscheme': '${colorscheme.vimPlugin.name}' }"; }
+      config.user.colorscheme.vimPlugin
+
+      lightline-vim
     ];
   };
 }
