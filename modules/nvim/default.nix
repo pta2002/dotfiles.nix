@@ -2,11 +2,15 @@
 {
   imports = [
     ../colorscheme.nix
+    ./lsp.nix
+    ./lsp/clangd.nix
   ];
 
   programs.neovim = {
     enable  = true;
     package = pkgs.neovim-nightly;
+
+    lsp.clangd.enable = true;
 
     viAlias  = true;
     vimAlias = true;
