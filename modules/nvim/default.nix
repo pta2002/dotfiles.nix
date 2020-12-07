@@ -11,6 +11,7 @@
     package = pkgs.neovim-nightly;
 
     lsp.clangd.enable = true;
+    lsp.rust-analyzer.enable = true;
 
     viAlias  = true;
     vimAlias = true;

@@ -3,6 +3,7 @@ with lib;
 {
   imports = [
     ./lsp/clangd.nix
+    ./lsp/rust-analyzer.nix
   ];
 
   options = {
