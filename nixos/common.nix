@@ -30,7 +30,14 @@
     extraGroups = [ "wheel" "docker" "audio" "video" "networkmanager" ];
   };
 
-  environment.systemPackages = [ pkgs.firefox ];
+  environment.systemPackages = [ pkgs.firefox pkgs.manpages ];
+
+  documentation.dev.enable = true;
+
+  # Pretty sudo
+  security.sudo.extraConfig = ''
+    Defaults pwfeedback
+  '';
 
   # Pretty boot screen
   boot.plymouth.enable = true;
