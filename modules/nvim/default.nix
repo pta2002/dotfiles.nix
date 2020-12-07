@@ -21,6 +21,8 @@ in
 
     plugins = with pkgs.vimPlugins; [
       vim-nix
+      vim-toml
+
       vim-commentary
       editorconfig-vim
 
