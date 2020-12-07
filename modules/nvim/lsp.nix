@@ -14,6 +14,7 @@ with lib;
 
   config = mkIf config.programs.neovim.lsp.enable {
     programs.neovim = {
+      extraPackages = [ pkgs.bat ];
       plugins = with pkgs.vimPlugins; [
         nvim-lspconfig
         popfix
