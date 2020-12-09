@@ -11,7 +11,12 @@
 
     lsp.clangd.enable = true;
     lsp.rust-analyzer.enable = true;
-    lsp.rnix-lsp.enable = true;
+    lsp.rnix-lsp.enable = false;
+
+    lsp.onAttach = ''function (client)
+        ${builtins.readFile ./lsp_attach.lua}
+      end
+    '';
 
     viAlias  = true;
     vimAlias = true;

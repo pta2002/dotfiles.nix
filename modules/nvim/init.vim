@@ -23,3 +23,6 @@ set hidden			            " Let me switch buffers without saving
 " Keymaps for easier usage
 map ç :
 map - /
+
+" Use , as leader
+let mapleader=" "
