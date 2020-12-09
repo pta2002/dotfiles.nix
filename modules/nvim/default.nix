@@ -2,8 +2,7 @@
 {
   imports = [
     ../colorscheme.nix
-    ./lsp.nix
-    ./lsp/clangd.nix
+    ./lsp
   ];
 
   programs.neovim = {
@@ -12,6 +11,7 @@
 
     lsp.clangd.enable = true;
     lsp.rust-analyzer.enable = true;
+    lsp.rnix-lsp.enable = true;
 
     viAlias  = true;
     vimAlias = true;
