@@ -3,6 +3,7 @@
   imports = [
     ../colorscheme.nix
     ./lsp
+    ./plugins/completion-nvim.nix
   ];
 
   programs.neovim = {
@@ -13,15 +14,14 @@
     lsp.rust-analyzer.enable = true;
     lsp.rnix-lsp.enable = false;
 
-    lsp.onAttach = ''function (client)
-        ${builtins.readFile ./lsp_attach.lua}
-      end
-    '';
+    lsp.onAttach = builtins.readFile ./lsp_attach.lua;
 
     viAlias  = true;
     vimAlias = true;
 
     extraConfig = builtins.readFile ./init.vim;
+
+    completion-nvim.enable = true;
 
     plugins = with pkgs.vimPlugins; [
       vim-nix

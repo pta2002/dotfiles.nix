@@ -21,9 +21,9 @@ in
       };
 
       onAttach = mkOption {
-        type = types.str;
+        type = types.lines;
         description = "A lua function to be run when a new LSP buffer is attached";
-        default = "function(...) end";
+        default = "";
       };
     };
   };
@@ -34,6 +34,7 @@ in
       plugins = with pkgs.vimPlugins; [
         nvim-lspconfig
         popfix
+
         { plugin = nvim-lsputils;
           config = ''
             lua <<EOF
@@ -54,7 +55,9 @@ in
         " {{{ LSP
         lua <<EOF
         local lspList = { ${concatStringsSep "," cfg.langServers} }
-        local onAttach = ${cfg.onAttach}
+        local onAttach = function(client)
+          ${cfg.onAttach}
+        end
 
         for i,server in ipairs(lspList) do
           if type(server) == "string" then
