@@ -3,6 +3,8 @@ set nocompatible		        " Don't attempt vi compatibility
 set nobackup			          " Don't create annoying swap files
 filetype plugin indent on	  " Use filetype indent
 
+set cot=menuone,preview
+
 set mouse=a			            " Allow mouse usage
 
 " Spacing

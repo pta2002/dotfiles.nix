@@ -7,6 +7,8 @@ local map = function(type, key, value)
   })
 end
 
+vim.api.nvim_command('setlocal omnifunc=v:lua.vim.lsp.omnifunc')
+
 map('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>')
 map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
 -- TODO Find a way to show this on hover
