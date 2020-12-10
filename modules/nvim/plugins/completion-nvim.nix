@@ -12,6 +12,12 @@ in
     programs.neovim.completion-nvim = {
       enable = mkEnableOption "completion-nvim";
 
+      completionTimer = mkOption {
+        type = types.int;
+        default = 400;
+        description = "how long to wait until the completion pops up";
+      };
+
       config = mkOption {
         type = types.lines;
         default = ''
@@ -19,6 +25,8 @@ in
           set shortmess+=c
           inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
           inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+          let g:completion_timer_cycle = ${builtins.toString cfg.completionTimer}
         '';
       };
     };
