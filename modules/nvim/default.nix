@@ -28,6 +28,7 @@
       vim-toml
 
       vim-commentary
+      vim-surround
       editorconfig-vim
 
       {

@@ -62,6 +62,7 @@
     color14 = "#8ec07c";
     color15 = "#ebdbb2";
 
+
     vimPlugin.plugin = pkgs.vimPlugins.gruvbox;
     vimPlugin.config = ''
       colorscheme gruvbox
