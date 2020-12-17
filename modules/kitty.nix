@@ -24,11 +24,11 @@ in
     font.name = ''Iosevka Term Extended'';
 
     settings = {
-      font_size = "12.0";
+      font_size = "16.0";
 
-      bold_font = "Iosevka Term Extended:bold";
-      italic_font = "Iosevka Term Extended:italic";
-      bold_italic_font = "Iosevka Term Extended:bold:italic";
+      bold_font = "Iosevka Term Bold Extended";
+      italic_font = "Iosevka Term Italic Extended";
+      bold_italic_font = "Iosevka Term Bold Italic Extended";
 
       symbol_map = "U+E0A0 Hack Nerd Font";
 
