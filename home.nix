@@ -41,6 +41,8 @@
     # mathematica
     qbittorrent
     kicad-small
+
+    darktable
   ];
   home.sessionVariables = { EDITOR = "nvim"; };
 
