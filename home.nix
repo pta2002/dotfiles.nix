@@ -23,6 +23,8 @@
     ninja
     ripgrep
     direnv
+    htop
+    unzip
 
     gcc gdb
     gnumake
