@@ -36,12 +36,18 @@ nnoremap k gk
 
 " Mappings for vimscript and lua
 augroup vimgroup
+  " Loads the buffer into the 0 register and executes it
   autocmd FileType vim nnoremap <buffer> <leader>sv <cmd>%y0<cr><cmd>@0<cr>
+  " Loads the buffer as a table of lines, concatenates it with newlines, and
+  " evals it
   autocmd FileType lua nnoremap <buffer> <leader>sv <cmd>lua load(table.concat(vim.api.nvim_buf_get_lines(0, 0, -1, false), "\n"))()<cr>
 augroup END
 
 augroup cbinds
-  autocmd FileType c,cpp nnoremap <buffer> K <cmd>Man<cr>
+  autocmd FileType c,cpp nnoremap <buffer> <leader>m <cmd>Man<cr>
 augroup END
 
+augroup text
+  autocmd FileType text,markdown setlocal textwidth=80
+augroup END
 " }}}
