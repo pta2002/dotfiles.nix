@@ -43,10 +43,6 @@ augroup vimgroup
   autocmd FileType lua nnoremap <buffer> <leader>sv <cmd>lua load(table.concat(vim.api.nvim_buf_get_lines(0, 0, -1, false), "\n"))()<cr>
 augroup END
 
-augroup cbinds
-  autocmd FileType c,cpp nnoremap <buffer> <leader>m <cmd>Man<cr>
-augroup END
-
 augroup text
   autocmd FileType text,markdown setlocal textwidth=80
 augroup END
