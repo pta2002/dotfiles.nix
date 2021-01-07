@@ -48,6 +48,7 @@
       config.user.colorscheme.vimPlugin
 
       lightline-vim
+      vim-table-mode
     ];
   };
 }

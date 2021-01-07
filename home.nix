@@ -37,7 +37,8 @@
     libqalculate
     libreoffice
 
-    texlive.combined.scheme-medium
+    (texlive.combine { inherit (texlive) scheme-medium adjmulticol; })
+    pandoc
 
     # Mathematica should probably be installed through nix-env
     # mathematica
