@@ -49,6 +49,9 @@
 
       lightline-vim
       vim-table-mode
+
+      tabular
+      vim-markdown
     ];
   };
 }
