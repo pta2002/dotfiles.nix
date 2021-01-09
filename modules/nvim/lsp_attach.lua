@@ -12,7 +12,6 @@ vim.api.nvim_command('setlocal omnifunc=v:lua.vim.lsp.omnifunc')
 map('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>')
 map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
 -- TODO Find a way to show this on hover
-map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
 map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>')
 map('n','gs','<cmd>lua vim.lsp.buf.signature_help()<CR>')
 map('n','gi','<cmd>lua vim.lsp.buf.implementation()<CR>')
