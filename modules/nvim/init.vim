@@ -22,6 +22,8 @@ set ignorecase			        " Case-insensitive search and tab complete
 
 set hidden			            " Let me switch buffers without saving
 
+set foldlevel=100           " Please please PLEASE don't start with stuff collapsed
+
 " Mappings {{{
 " Use , as leader
 let mapleader=" "
