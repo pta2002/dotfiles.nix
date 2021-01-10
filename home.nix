@@ -46,6 +46,8 @@
     kicad-small
 
     darktable
+
+    hledger hledger-web hledger-ui
   ];
   home.sessionVariables = { EDITOR = "nvim"; };
 

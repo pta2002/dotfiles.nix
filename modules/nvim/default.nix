@@ -52,6 +52,7 @@
 
       tabular
       vim-markdown
+      vim-ledger
     ];
   };
 }
