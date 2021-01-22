@@ -26,6 +26,9 @@ in
     settings = {
       font_size = "16.0";
 
+      # This is EXTREMELY annoying when compiling something with lots of warnings...
+      enable_audio_bell = "no";
+
       bold_font = "Iosevka Term Bold Extended";
       italic_font = "Iosevka Term Italic Extended";
       bold_italic_font = "Iosevka Term Bold Italic Extended";
