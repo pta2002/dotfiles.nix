@@ -36,7 +36,7 @@ noremap - /
 nnoremap j gj
 nnoremap k gk
 
-" Mappings for vimscript and lua
+" Mappings for vimscript and lua {{{
 augroup vimgroup
   " Loads the buffer into the 0 register and executes it
   autocmd FileType vim nnoremap <buffer> <leader>sv <cmd>%y0<cr><cmd>@0<cr>
@@ -49,3 +49,6 @@ augroup text
   autocmd FileType text,markdown setlocal textwidth=80
 augroup END
 " }}}
+
+" Vim terraform
+let g:terraform_align = 1
