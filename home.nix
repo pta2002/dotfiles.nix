@@ -48,6 +48,9 @@
     darktable
 
     hledger hledger-web hledger-ui
+
+    # Firefox is acting up, so use this for now ig
+    brave
   ];
   home.sessionVariables = { EDITOR = "nvim"; };
 
