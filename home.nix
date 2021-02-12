@@ -88,6 +88,7 @@
     ./modules/theme.nix
     ./modules/zathura.nix
     ./modules/starship.nix
+    ./modules/syncthing.nix
     ./modules/nvim
 
     ./modules/colorscheme.nix
