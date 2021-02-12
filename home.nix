@@ -51,6 +51,8 @@
 
     # Firefox is acting up, so use this for now ig
     brave
+
+    xournalpp
   ];
   home.sessionVariables = { EDITOR = "nvim"; };
 
