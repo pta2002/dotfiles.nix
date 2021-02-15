@@ -53,6 +53,9 @@
     brave
 
     xournalpp
+    krita
+
+    discord
   ];
   home.sessionVariables = { EDITOR = "nvim"; };
 
