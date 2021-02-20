@@ -56,6 +56,10 @@
     krita
 
     discord
+
+    mcomix3 unrar dtrx
+
+    jetbrains.idea-ultimate openjdk
   ];
   home.sessionVariables = { EDITOR = "nvim"; };
 
