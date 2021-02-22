@@ -56,6 +56,7 @@
       vim-ledger
 
       vim-terraform
+      vim-elixir
     ];
   };
 }

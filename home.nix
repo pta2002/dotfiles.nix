@@ -59,7 +59,12 @@
 
     mcomix3 unrar dtrx
 
-    jetbrains.idea-ultimate openjdk
+    (jetbrains.idea-ultimate.override {
+      jdk = jetbrains.jdk;
+    })
+
+    python3
+    python3Packages.solo-python
   ];
   home.sessionVariables = { EDITOR = "nvim"; };
 
