@@ -62,9 +62,12 @@
     (jetbrains.idea-ultimate.override {
       jdk = jetbrains.jdk;
     })
+    jetbrains.clion
 
     python3
     python3Packages.solo-python
+    libusb
+    guitarix
   ];
   home.sessionVariables = { EDITOR = "nvim"; };
 

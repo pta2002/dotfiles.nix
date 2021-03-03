@@ -57,6 +57,7 @@
 
       vim-terraform
       vim-elixir
+      auto-pairs
     ];
   };
 }
