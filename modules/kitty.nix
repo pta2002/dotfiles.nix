@@ -5,9 +5,6 @@ let
 
     privateBuildPlan = {
       family = "Iosevka Term";
-      design = [
-        "term" "v-l-italic" "v-i-italic" "v-g-singlestorey"
-      ];
     };
   });
 in
@@ -21,7 +18,7 @@ in
   programs.kitty = {
     enable = true;
     font.package = iosevka-term;
-    font.name = ''Iosevka Term Extended'';
+    font.name = ''Iosevka Term'';
 
     settings = {
       font_size = "16.0";
@@ -29,9 +26,9 @@ in
       # This is EXTREMELY annoying when compiling something with lots of warnings...
       enable_audio_bell = "no";
 
-      bold_font = "Iosevka Term Bold Extended";
-      italic_font = "Iosevka Term Italic Extended";
-      bold_italic_font = "Iosevka Term Bold Italic Extended";
+      bold_font = "Iosevka Term Bold";
+      italic_font = "Iosevka Term Italic";
+      bold_italic_font = "Iosevka Term Bold Italic";
 
       symbol_map = "U+E0A0 Hack Nerd Font";
 

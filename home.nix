@@ -68,6 +68,8 @@
     python3Packages.solo-python
     libusb
     guitarix
+
+    vscode
   ];
   home.sessionVariables = { EDITOR = "nvim"; };
 
