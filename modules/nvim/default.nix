@@ -1,9 +1,10 @@
 { pkgs, config, ... }:
 let
-  nixvim = import (builtins.fetchTarball {
-    url = "https://github.com/pta2002/nixvim/archive/7aa8c221385ad2e6e090eab6bd32cbb850ff2de3.tar.gz";
-    sha256 = "1nbig9xsc33m4vs17k86dxg5k99ibcxz40s8mmvqwwlfak59dc60";
-  });
+#  nixvim = import (builtins.fetchTarball {
+#    url = "https://github.com/pta2002/nixvim/archive/7aa8c221385ad2e6e090eab6bd32cbb850ff2de3.tar.gz";
+#    sha256 = "1nbig9xsc33m4vs17k86dxg5k99ibcxz40s8mmvqwwlfak59dc60";
+#  });
+  nixvim = import /home/pta2002/Projects/nixvim;
 in
 {
   imports = [
@@ -56,6 +57,7 @@ in
     };
     extraPlugins = with pkgs.vimPlugins; [
       vim-toml
+      vim-nix
       vim-surround
       editorconfig-vim
       vim-table-mode
@@ -72,7 +74,7 @@ in
       number = true;
       tabstop = 2;
       shiftwidth = 2;
-      expandtab = 2;
+      expandtab = true;
       smarttab = true;
       autoindent = true;
       cindent = true;

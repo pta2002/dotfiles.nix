@@ -17,8 +17,8 @@ in
 
   programs.kitty = {
     enable = true;
-    font.package = iosevka-term;
-    font.name = ''Iosevka Term'';
+#    font.package = iosevka-term;
+#    font.name = ''Iosevka Term'';
 
     settings = {
       font_size = "16.0";
