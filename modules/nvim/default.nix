@@ -1,8 +1,8 @@
 { pkgs, config, ... }:
 let
-  nixvim = import (builtins.fetchGit {
-    url = "https://github.com/pta2002/nixvim";
-    ref = "main";
+  nixvim = import (builtins.fetchTarball {
+    url = "https://github.com/pta2002/nixvim/archive/7aa8c221385ad2e6e090eab6bd32cbb850ff2de3.tar.gz";
+    sha256 = "1nbig9xsc33m4vs17k86dxg5k99ibcxz40s8mmvqwwlfak59dc60";
   });
 in
 {
