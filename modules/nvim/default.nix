@@ -39,6 +39,11 @@ in
       startify = {
         enable = true;
         useUnicode = true;
+        bookmarks = [
+          { n = "~/.config/nixpkgs/modules/nvim/default.nix"; }
+          { l = "~/Projects/li3"; }
+          { u = "~/Uni"; }
+        ];
       };
 
       telescope = {
@@ -54,7 +59,12 @@ in
       gitgutter.enable = true;
       fugitive.enable = true;
 
+      chadtree = {
+        enable = true;
+        theme.textColors = "nerdtree_syntax_dark";
+      };
     };
+
     extraPlugins = with pkgs.vimPlugins; [
       vim-toml
       vim-nix
@@ -63,6 +73,7 @@ in
       vim-table-mode
       tabular
       vim-markdown
+      vim-hcl
 
       vim-terraform
       vim-elixir
@@ -70,25 +81,42 @@ in
     ];
 
     options = {
+      # Enable mouse
       mouse = "a";
+
+      # Show line numbers
       number = true;
+
+      # Indentation is 2 spaces
       tabstop = 2;
       shiftwidth = 2;
       expandtab = true;
       smarttab = true;
       autoindent = true;
       cindent = true;
+
+      # Wrap lines
       linebreak = true;
+
+      # Let me switch buffers without saving
       hidden = true;
 
+      # Don't create a swap file
       nobackup = true;
+
+      # Show a popup when autocompleting
+      wildmenu = true;
       cot = [ "menuone" "preview" ];
 
-      wildmenu = true;
+      # Case-insensitive search and tab complete
       ignorecase = true;
+
+      # Split to the right instead of to the left
+      splitright = true;
     };
 
     globals = {
+      # Highlight lua code embeded in vimscript files
       vimsyn_embed = "l";
       mapleader = " ";
     };
