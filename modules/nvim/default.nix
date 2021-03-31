@@ -59,15 +59,14 @@ in
       gitgutter.enable = true;
       fugitive.enable = true;
 
-      chadtree = {
-        enable = true;
-        theme.textColors = "nerdtree_syntax_dark";
-      };
+      zig.enable = true;
+      nix.enable = true;
+
+      barbar.enable = true;
     };
 
     extraPlugins = with pkgs.vimPlugins; [
       vim-toml
-      vim-nix
       vim-surround
       editorconfig-vim
       vim-table-mode

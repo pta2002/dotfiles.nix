@@ -26,8 +26,8 @@
     htop
     unzip
 
-    gcc gdb
-    gnumake
+    gcc gdb pkg-config glib glib.dev
+    gnumake bear
 
     zoom-us
     emacs
