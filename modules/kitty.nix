@@ -54,7 +54,7 @@ in
 
       disable_ligatures = "always";
 
-      background_opacity = "0.5";
+      background_opacity = "0.7";
       window_padding_width = "5";
     };
   };
