@@ -18,6 +18,8 @@
   # changes in each release.
   home.stateVersion = "21.03";
 
+  nixpkgs.overlays = [ (import ./overlays/picom.nix) ];
+
   home.packages = with pkgs; [
     git
     ninja
@@ -35,7 +37,7 @@
     vlc
 
     libqalculate
-    libreoffice
+    # libreoffice
 
     (texlive.combine { inherit (texlive) scheme-medium adjmulticol; })
     pandoc
@@ -65,9 +67,8 @@
     jetbrains.clion
 
     python3
-    python3Packages.solo-python
+    # python3Packages.solo-python
     libusb
-    guitarix
 
     vscode
   ];
