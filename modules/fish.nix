@@ -6,7 +6,8 @@
   programs.fish = {
     enable = true;
     shellAliases = {
-      ll = "ll -l";
+      ll = "ls -l";
+      v = "nvim";
       vi = "nvim";
       vim = "nvim";
     };

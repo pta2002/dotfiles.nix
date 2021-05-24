@@ -24,6 +24,8 @@ in
   home.packages = with pkgs; [
     neovim-nightly
     clang-tools
+    haskell-language-server ghc cabal-install
+    jdk maven
   ];
 
   programs.nixvim = {

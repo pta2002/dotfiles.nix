@@ -71,6 +71,8 @@
     libusb
 
     vscode
+
+    stack
   ];
   home.sessionVariables = { EDITOR = "nvim"; };
 
