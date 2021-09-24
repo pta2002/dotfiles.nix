@@ -73,6 +73,18 @@
     vscode
 
     stack
+
+    wineWowPackages.stable
+
+    (lutris.override {
+      lutris-unwrapped = (lutris-unwrapped.override {
+        wine = wineWowPackages.stable;
+      });
+    })
+
+    nodejs nodePackages.expo-cli
+
+    beancount fava
   ];
   home.sessionVariables = { EDITOR = "nvim"; };
 
