@@ -85,6 +85,8 @@
     nodejs nodePackages.expo-cli
 
     beancount fava
+
+    gh
   ];
   home.sessionVariables = { EDITOR = "nvim"; };
 
