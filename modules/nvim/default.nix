@@ -10,6 +10,7 @@
     neovim
     clang-tools
     haskell-language-server ghc cabal-install
+    rust-analyzer rustfmt
     pyright
     jdk maven
   ];

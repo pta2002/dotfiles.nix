@@ -87,6 +87,8 @@
     beancount fava
 
     gh
+
+    rustc cargo
   ];
   home.sessionVariables = { EDITOR = "nvim"; };
 
