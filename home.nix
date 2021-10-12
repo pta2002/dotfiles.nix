@@ -18,7 +18,7 @@
   # changes in each release.
   home.stateVersion = "21.03";
 
-  nixpkgs.overlays = [ (import ./overlays/picom.nix) ];
+  nixpkgs.overlays = [ (import ./overlays/visual-paradigm.nix) ];
 
   home.packages = with pkgs; [
     git
@@ -39,7 +39,7 @@
     libqalculate
     # libreoffice
 
-    (texlive.combine { inherit (texlive) scheme-medium adjmulticol; })
+    (texlive.combine { inherit (texlive) scheme-medium adjmulticol arydshln background nomencl everypage; })
     pandoc
 
     # Mathematica should probably be installed through nix-env
@@ -89,6 +89,9 @@
     gh
 
     rustc cargo
+
+    visual-paradigm
+    octaveFull
   ];
   home.sessionVariables = { EDITOR = "nvim"; };
 
@@ -122,7 +125,7 @@
     ./modules/git.nix
     ./modules/fish.nix
     ./modules/kitty.nix
-    ./modules/awesome.nix
+    # ./modules/awesome.nix
     ./modules/theme.nix
     ./modules/zathura.nix
     ./modules/starship.nix
