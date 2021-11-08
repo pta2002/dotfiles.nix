@@ -7,11 +7,14 @@
   ];
 
   home.packages = with pkgs; [
-    neovim
+    neovim-nightly
     clang-tools
     haskell-language-server ghc cabal-install
     rust-analyzer rustfmt
     pyright
+    nodePackages.typescript-language-server
     jdk maven
+    gopls
+    pyright
   ];
 }

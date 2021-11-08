@@ -5,8 +5,9 @@ let
     src = fetchurl {
       name = "visual-paradigm.tar.gz";
       url = "https://www.visual-paradigm.com/downloads/vp/Visual_Paradigm_Linux64_InstallFree.tar.gz";
-      sha256 = "b99485cadfa5f9e410b24096d69c984b68f06acef559b0cf0fbb976654e72d31";
+      sha256 = "sha256-wkgKgUyMBLUQZgv3KYsnI7s9ubbCVxD4J13byZmmN1s=";
     };
+
   in stdenv.mkDerivation rec {
     version = "16.3";
     pname = "visual-paradigm";
@@ -95,7 +96,8 @@ let
       run_unpack200 $out/bin/jre/jre
 
       makeWrapper $out/bin/Visual_Paradigm-unwrapped $out/bin/visual-paradigm \
-        --set INSTALL4J_JAVA_HOME_OVERRIDE ${pkgs.openjdk11}
+      --set INSTALL4J_JAVA_HOME_OVERRIDE ${pkgs.openjdk11} \
+      --set _JAVA_AWT_WM_NONREPARENTING 1
     '';
   };
   pkgs = import <nixpkgs> {};

@@ -18,13 +18,17 @@
   # changes in each release.
   home.stateVersion = "21.03";
 
-  nixpkgs.overlays = [ (import ./overlays/visual-paradigm.nix) ];
+  nixpkgs.overlays = [
+    (import ./overlays/visual-paradigm.nix) (import ./overlays/core.nix)
+    (import (builtins.fetchTarball {
+      url = https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz;
+    }))
+  ];
 
   home.packages = with pkgs; [
     git
     ninja
     ripgrep
-    direnv
     htop
     unzip
 
@@ -67,33 +71,42 @@
     jetbrains.clion
 
     python3
-    # python3Packages.solo-python
-    libusb
+    rustc cargo
+    go
+    zig zls
+    nodejs nodePackages.expo-cli
 
-    vscode
+    libusb
 
     stack
 
-    wineWowPackages.stable
+    # wineWowPackages.stable
 
-    (lutris.override {
-      lutris-unwrapped = (lutris-unwrapped.override {
-        wine = wineWowPackages.stable;
-      });
-    })
+    # (lutris.override {
+    #   lutris-unwrapped = (lutris-unwrapped.override {
+    #     wine = wineWowPackages.stable;
+    #   });
+    # })
 
-    nodejs nodePackages.expo-cli
 
     beancount fava
 
     gh
 
-    rustc cargo
-
     visual-paradigm
     octaveFull
+
+    gnome3.gnome-keyring
+    android-studio
   ];
   home.sessionVariables = { EDITOR = "nvim"; };
+
+  programs.vscode = {
+    enable = true;
+    extensions = with pkgs.vscode-extensions; [
+      ms-vscode.cpptools
+    ];
+  };
 
   user.colorscheme = {
     color0 = "#282828";
@@ -119,6 +132,12 @@
       colorscheme gruvbox
       let g:lightline = { 'colorscheme': 'gruvbox' }
     '';
+  };
+
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
+    nix-direnv.enableFlakes = true;
   };
 
   imports = [
