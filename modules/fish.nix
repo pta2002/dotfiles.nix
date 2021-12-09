@@ -14,9 +14,6 @@
 
     interactiveShellInit = ''
       set fish_greeting
-    '';
-
-    promptInit = ''
       any-nix-shell fish | source
     '';
   };

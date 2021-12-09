@@ -13,8 +13,13 @@
     rust-analyzer rustfmt
     pyright
     nodePackages.typescript-language-server
-    jdk maven
+    jdk17
+    # maven
+    (maven.override {
+      jdk = jdk17;
+    })
     gopls
     pyright
+    coursier metals dotty sbt
   ];
 }

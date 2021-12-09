@@ -65,10 +65,9 @@
 
     mcomix3 unrar dtrx
 
-    (jetbrains.idea-ultimate.override {
-      jdk = jetbrains.jdk;
-    })
+    jetbrains.idea-ultimate
     jetbrains.clion
+    jetbrains.webstorm
 
     python3
     rustc cargo
@@ -137,7 +136,6 @@
   programs.direnv = {
     enable = true;
     nix-direnv.enable = true;
-    nix-direnv.enableFlakes = true;
   };
 
   imports = [
